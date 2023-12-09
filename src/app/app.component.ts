@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
+//components
+import { EmployeeListComponent } from './components';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [CommonModule, FormsModule, EmployeeListComponent],
 })
 export class AppComponent {
-  title = 'firts-project';
+  constructor() {
+    //setInterval(() => (this.disabled = false), 2000);
+  }
 }
